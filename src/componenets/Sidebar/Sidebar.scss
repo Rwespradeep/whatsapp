@@ -1,0 +1,108 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0.35;
+
+  @media (max-width: 605px) {
+    flex: 1;
+    background-color: #00a884;
+  }
+
+  .sidebar_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-right: 1px solid lightgray;
+
+    .dp {
+      @media (max-width: 605px) {
+        display: none;
+      }
+    }
+
+    .mobileTitle {
+      display: none;
+      @media (max-width: 605px) {
+        display: block;
+        font-size: 24px;
+        margin-left: -5px;
+        color: white;
+      }
+    }
+
+    .sidebar_header_right {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-width: 10vw;
+
+      .MuiSvgIcon-root {
+        // margin-right: 2vw;
+        font-size: 24px !important;
+
+        @media (max-width: 605px) {
+          color: white;
+        }
+      }
+
+      .logout {
+        &:hover {
+          background-color: #00a884;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .sidebar_search {
+    display: flex;
+    align-items: center;
+    background-color: #f0f2f5;
+    height: 30px;
+    padding: 10px;
+
+    @media (max-width: 605px) {
+      background-color: #00a884;
+    }
+
+    .sidebar_searchContainer {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      width: 100%;
+      height: 35px;
+      border-radius: 20px;
+
+      .MuiSvgIcon-root {
+        color: gray;
+        padding: 10px;
+      }
+
+      input {
+        border: none; // disables border for input
+        margin-left: 10px;
+        outline-width: 0; //disables the blue line around input
+      }
+    }
+  }
+
+  .sidebar_chats {
+    flex: 1;
+    background-color: white;
+    overflow: scroll;
+  }
+
+  .add_button {
+    position: absolute;
+    bottom: 90px;
+    left: 480px;
+
+    .MuiSvgIcon-root {
+      font-size: 40px;
+
+      &:hover {
+        color: #00a884;
+      }
+    }
+  }
+}
